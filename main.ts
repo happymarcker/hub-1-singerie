@@ -8,15 +8,17 @@ input.onButtonPressed(Button.AB, function () {
     }
 })
 input.onButtonPressed(Button.B, function () {
-    radio.sendString("Faute")
-    music.playTone(523, music.beat(BeatFraction.Quarter))
+    if (Etat == 1) {
+        radio.sendString("Faute")
+        music.playTone(523, music.beat(BeatFraction.Quarter))
+    }
 })
 radio.onReceivedValue(function (name, value) {
     if (name == "Etat") {
         Etat = value
         basic.showNumber(value)
     }
-    if (name == "Chrono") {
+    if (name == "Temps") {
         Chrono = value
     }
 })

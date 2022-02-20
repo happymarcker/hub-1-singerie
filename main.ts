@@ -42,23 +42,23 @@ radio.onReceivedString(function (receivedString) {
     }
     if (receivedString == "Faute") {
         FautesNombre += 1
-        if (FautesNombre == 1) {
+        if (FautesNombre == 1 && Etat == 1) {
             Led10.showColor(neopixel.colors(NeoPixelColors.Red))
             Led10.show()
         }
-        if (FautesNombre == 2) {
+        if (FautesNombre == 2 && Etat == 1) {
             Led09.showColor(neopixel.colors(NeoPixelColors.Red))
             Led09.show()
         }
-        if (FautesNombre == 3) {
+        if (FautesNombre == 3 && Etat == 1) {
             Led08.showColor(neopixel.colors(NeoPixelColors.Red))
             Led08.show()
         }
-        if (FautesNombre == 4) {
+        if (FautesNombre == 4 && Etat == 1) {
             Led07.showColor(neopixel.colors(NeoPixelColors.Red))
             Led07.show()
         }
-        if (FautesNombre == FautesMax) {
+        if (FautesNombre == FautesMax && Etat == 1) {
             Etat = 3
             radio.sendValue("Etat", Etat)
             Led06.showColor(neopixel.colors(NeoPixelColors.Red))

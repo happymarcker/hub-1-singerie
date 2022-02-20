@@ -26,6 +26,8 @@ radio.onReceivedNumber(function (receivedNumber) {
         radio.sendValue("Temps", Temps)
         Led05.showColor(neopixel.colors(NeoPixelColors.Green))
         Led05.show()
+        Led01.showColor(neopixel.colors(NeoPixelColors.Green))
+        Led01.show()
     }
 })
 radio.onReceivedString(function (receivedString) {

@@ -22,7 +22,7 @@ radio.onReceivedNumber(function (receivedNumber) {
         Etat = 2
         radio.sendValue("Etat", Etat)
         Temps = (input.runningTime() - Départ) / 1000
-        Temps = Temps + (BonusNombre * BonusTemps - (FautesNombre + FautesTemps))
+        Temps = Temps - (BonusNombre * BonusTemps - (FautesNombre + FautesTemps))
         radio.sendValue("Temps", Temps)
         Led05.showColor(neopixel.colors(NeoPixelColors.Green))
         Led05.show()

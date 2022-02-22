@@ -1,8 +1,8 @@
 radio.onReceivedNumber(function (receivedNumber) {
     if (receivedNumber == 1 && Etat == 0) {
+        Départ = input.runningTime()
         Etat = 1
         radio.sendValue("Etat", Etat)
-        Départ = input.runningTime()
         Led01.showColor(neopixel.colors(NeoPixelColors.Yellow))
         Led01.show()
         Led02.showColor(neopixel.colors(NeoPixelColors.Green))
@@ -19,10 +19,9 @@ radio.onReceivedNumber(function (receivedNumber) {
         Led04.show()
     }
     if (receivedNumber == 0 && Etat == 1) {
+        Temps = (input.runningTime() - Départ) / 1000 + (FautesNombre * FautesTemps - BonusNombre * BonusTemps)
         Etat = 2
         radio.sendValue("Etat", Etat)
-        Temps = (input.runningTime() - Départ) / 1000
-        Temps = Temps - (BonusNombre * BonusTemps - (FautesNombre + FautesTemps))
         radio.sendValue("Temps", Temps)
         Led05.showColor(neopixel.colors(NeoPixelColors.Green))
         Led05.show()

@@ -51,7 +51,7 @@ radio.onReceivedString(function (receivedString) {
             Led10.show()
         }
     }
-    if (receivedString == "Elimine") {
+    if (receivedString == "Eliminer") {
         Led01.showColor(neopixel.colors(NeoPixelColors.Red))
         Led01.show()
         Led05.showColor(neopixel.colors(NeoPixelColors.Red))

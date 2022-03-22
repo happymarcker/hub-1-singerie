@@ -89,17 +89,7 @@ radio.onReceivedValue(function (name, value) {
     if (name == "Temps") {
         Chrono = value
     }
-    if (name == "Bonus1") {
-        Bonus1 = value
-    }
-    if (name == "Bonus2") {
-        Bonus2 = value
-    }
-    if (name == "Penalite") {
-        Penalite = value
-    }
 })
-// attention s'assurer que l'arbitre a toujours la valeur du hub en référence
 joystickbit.onButtonEvent(joystickbit.JoystickBitPin.P14, joystickbit.ButtonType.up, function () {
     if (Controle == 1) {
         radio.sendValue("ChangementBonus1", Bonus1)

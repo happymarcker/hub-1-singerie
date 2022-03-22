@@ -1,11 +1,12 @@
 {
-    "name": "Arbitre-1-Singerie",
+    "name": "Arbitre-1-Singerie v1-1",
     "description": "",
     "dependencies": {
         "core": "*",
         "radio": "*",
         "microphone": "*",
-        "neopixel": "github:Microsoft/pxt-neopixel#v0.7.3"
+        "neopixel": "github:Microsoft/pxt-neopixel#v0.7.3",
+        "joystickbit": "github:tinkertanker/pxt-joystickbit#v1.0.1"
     },
     "files": [
         "main.blocks",
@@ -19,7 +20,7 @@
         "branch": "v4.0.16",
         "tag": "v4.0.16",
         "commits": "https://github.com/microsoft/pxt-microbit/commits/04b1a5492fb75af626caed5601ee8d794d970dd7",
-        "target": "4.0.17",
+        "target": "4.0.18",
         "pxt": "7.0.12",
         "targetId": "microbit"
     },

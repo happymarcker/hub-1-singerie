@@ -53,6 +53,8 @@ input.onButtonPressed(Button.A, function () {
 input.onButtonPressed(Button.AB, function () {
     if (Etat == 2) {
         basic.showNumber(Chrono)
+    } else {
+        basic.showString("v1.1")
     }
 })
 joystickbit.onButtonEvent(joystickbit.JoystickBitPin.P15, joystickbit.ButtonType.up, function () {
@@ -87,7 +89,17 @@ radio.onReceivedValue(function (name, value) {
     if (name == "Temps") {
         Chrono = value
     }
+    if (name == "Bonus1") {
+        Bonus1 = value
+    }
+    if (name == "Bonus2") {
+        Bonus2 = value
+    }
+    if (name == "Penalite") {
+        Penalite = value
+    }
 })
+// attention s'assurer que l'arbitre a toujours la valeur du hub en référence
 joystickbit.onButtonEvent(joystickbit.JoystickBitPin.P14, joystickbit.ButtonType.up, function () {
     if (Controle == 1) {
         radio.sendValue("ChangementBonus1", Bonus1)
